@@ -31,3 +31,4 @@ C:\Users\HF\Source\Repos\skp-tournament\SkpEsport\SkpEsport\bin\Microsoft.CodeDo
 C:\Users\HF\Source\Repos\skp-tournament\SkpEsport\SkpEsport\obj\Release\SkpEsport.dll
 C:\Users\HF\Source\Repos\skp-tournament\SkpEsport\SkpEsport\obj\Release\SkpEsport.pdb
 C:\Users\HF\Source\Repos\skp-tournament\SkpEsport\SkpEsport\obj\Release\SkpEsport.csprojResolveAssemblyReference.cache
+C:\Users\HF\Source\Repos\skp-tournament\SkpEsport\SkpEsport\bin\MySql.Data.dll
