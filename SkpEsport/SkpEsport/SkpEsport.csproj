@@ -98,7 +98,66 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\SkpEsport.dll" />
+    <Content Include="bin\SkpEsport.pdb" />
+    <Content Include="index.html" />
     <Content Include="IndexPage.aspx" />
+    <Content Include="LoginTest.aspx" />
+    <Content Include="node_modules\mdbootstrap\css\bootstrap.css" />
+    <Content Include="node_modules\mdbootstrap\css\bootstrap.min.css" />
+    <Content Include="node_modules\mdbootstrap\css\mdb.css" />
+    <Content Include="node_modules\mdbootstrap\css\mdb.min.css" />
+    <Content Include="node_modules\mdbootstrap\css\style.css" />
+    <Content Include="node_modules\mdbootstrap\img\lightbox\default-skin.png" />
+    <Content Include="node_modules\mdbootstrap\img\lightbox\default-skin.svg" />
+    <Content Include="node_modules\mdbootstrap\img\lightbox\preloader.gif" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\01.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\02.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\03.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\04.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\05.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\06.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\07.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\08.png" />
+    <Content Include="node_modules\mdbootstrap\img\overlays\09.png" />
+    <Content Include="node_modules\mdbootstrap\img\svg\arrow_left.svg" />
+    <Content Include="node_modules\mdbootstrap\img\svg\arrow_right.svg" />
+    <Content Include="node_modules\mdbootstrap\index.html" />
+    <Content Include="node_modules\mdbootstrap\js\bootstrap.js" />
+    <Content Include="node_modules\mdbootstrap\js\bootstrap.min.js" />
+    <Content Include="node_modules\mdbootstrap\js\jquery-3.2.1.min.js" />
+    <Content Include="node_modules\mdbootstrap\js\mdb.js" />
+    <Content Include="node_modules\mdbootstrap\js\mdb.min.js" />
+    <Content Include="node_modules\mdbootstrap\js\popper.min.js" />
+    <Content Include="node_modules\mdbootstrap\README.txt" />
+    <Content Include="node_modules\mdbootstrap\sass\README.txt" />
+    <Content Include="obj\Debug\SkpEsport.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SkpEsport.dll" />
+    <Content Include="obj\Debug\SkpEsport.pdb" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -108,6 +167,71 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\SkpEsport.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\SkpEsport.csprojResolveAssemblyReference.cache" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\SkpEsport.dll.config" />
+    <Content Include="node_modules\mdbootstrap\.npmignore" />
+    <Content Include="node_modules\mdbootstrap\bower.json" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Bold.eot" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Bold.ttf" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Bold.woff" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Bold.woff2" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Light.eot" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Light.ttf" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Light.woff" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Light.woff2" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Medium.eot" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Medium.ttf" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Medium.woff" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Medium.woff2" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Regular.eot" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Regular.ttf" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Regular.woff" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Regular.woff2" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Thin.eot" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Thin.ttf" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Thin.woff" />
+    <Content Include="node_modules\mdbootstrap\font\roboto\Roboto-Thin.woff2" />
+    <Content Include="node_modules\mdbootstrap\License.pdf" />
+    <Content Include="node_modules\mdbootstrap\package.json" />
+    <Content Include="node_modules\mdbootstrap\README.md" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\data\_colors.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\data\_functions.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\data\_mixins.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\data\_prefixer.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\data\_variables-b4.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\data\_variables.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_animations.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_badge.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_breadcrumb.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_buttons.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_cards-basic.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_carousel-basic.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_collapse.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_deprecated.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_dropdowns.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_footer.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_forms-basic.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_global.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_helpers.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_jumbotron.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_list-group.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_masks.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_modals.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_msc.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_navbar.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_pagination.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_progress.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_tables.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_typography.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\free\_waves.scss" />
+    <Content Include="node_modules\mdbootstrap\sass\mdb\_custom.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,7 +250,6 @@
     <Content Include="Imgs\hots.png" />
     <Content Include="Imgs\lol.png" />
     <Content Include="Imgs\overwatch.png" />
-    <Content Include="index.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -152,6 +275,19 @@
     <Compile Include="IndexPage.aspx.designer.cs">
       <DependentUpon>IndexPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LoginTest.aspx.cs">
+      <DependentUpon>LoginTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginTest.aspx.designer.cs">
+      <DependentUpon>LoginTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users.cs" />
   </ItemGroup>

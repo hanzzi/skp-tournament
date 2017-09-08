@@ -21,30 +21,35 @@ namespace SkpEsport
         {
             _username = tb_Email.Text;
             _password = tb_Password.Text;
+           // ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + _username + " ----- " + _password + "');", true);
+
+            string conmsg = dbCon.CheckConnection();
+            //ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + conmsg + "');", true);
+            if (dbCon.CheckConnection() == "Connection success")
+            {
+                Response.Redirect("LoginTest.aspx");
+            }
 
 
         }
 
         protected void btn_test_OnClick(object sender, EventArgs e)
         {
-            //string conmsg = dbCon.CheckConnection();
-            //ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + conmsg + "');", true);
-
-            //if (dbCon.OpenConnection() == true)
-            //{
-            //    dbCon.UserExists("Admin");
-            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Admin found" + "');", true);
-
-            //}
-            //else
-            //{
-            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Something went wrong" + "');", true);
-            //}
-
-            if (dbCon.UserExists("Admin"))
+            if (dbCon.OpenConnection())
             {
-                
+                dbCon.UserExists("Admin");
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Admin found" + "');", true);
+
             }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Something went wrong" + "');", true);
+            }
+
+            //if (dbCon.UserExists("Admin"))
+            //{
+
+            //}
 
         }
     }

@@ -22,15 +22,6 @@ namespace SkpEsport {
         protected global::System.Web.UI.HtmlControls.HtmlForm WebContentForm;
         
         /// <summary>
-        /// btn_test control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_test;
-        
-        /// <summary>
         /// tb_Email control.
         /// </summary>
         /// <remarks>
@@ -49,21 +40,12 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.TextBox tb_Password;
         
         /// <summary>
-        /// lbl_Test1 control.
+        /// btn_login2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_Test1;
-        
-        /// <summary>
-        /// btn_login control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_login;
+        protected global::System.Web.UI.WebControls.LinkButton btn_login2;
     }
 }

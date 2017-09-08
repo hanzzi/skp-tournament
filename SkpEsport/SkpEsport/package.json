@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "1.12.4"
+    "mdbootstrap": "^4.4.1"
   },
   "devDependencies": {},
   "scripts": {
