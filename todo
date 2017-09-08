@@ -1,10 +1,9 @@
-ladder side - separate - table
+ladder side - separate - table - tooltip role os users - win/loss ratio 
 
 team profile - separate - leader can edit - choose game - delete team button - members
 
-profile side - separate - username can only  be seen - can edit password - teams that your in
 
-admin side - separate - delete user - delete team - 
+admin side - separate - delete user - delete team
 
 
 
@@ -13,3 +12,7 @@ admin side - separate - delete user - delete team -
 Rules side - popup - ipsum text
 
 sign up - username felt
+
+------ SECOND ---------------
+
+profile side - popup - username can only  be seen - can edit password - teams that your in - role in game
