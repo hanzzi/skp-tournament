@@ -1,18 +1,44 @@
-ladder side - separate - table - tooltip role os users - win/loss ratio 
 
-team profile - separate - leader can edit - choose game - delete team button - members
+------ PHASE 1 -------------------
 
+rule text
+
+win/loss table - after click on game image
+
+profile - bio 
+
+team creation - choose game
+
+team profile - choose game as later choice 
+
+team join list - hans' axla script + edit classes - join button - leave button
+
+admin side - editor of scores
+
+------ PHASE 2 ------------------
 
 admin side - separate - delete user - delete team
 
+team profile - separate - leader can edit - delete team button - members
 
 
-------- FIRST ------------
+offline support 
 
-Rules side - popup - ipsum text
+notification 
 
-sign up - username felt
+profile side - popup - delete yourself
 
------- SECOND ---------------
 
-profile side - popup - username can only  be seen - can edit password - teams that your in - role in game
+
+----------------------  PHASE 3  ----------------------
+
+team profile - choose roles 
+
+ladder side - separate - table - tooltip role users to see roles - win/loss ratio 
+
+
+profile side - favorite weapon/character - choose role
+
+CS:GO - roles: sniper, lurker, entry, support, Leader, knifer, rifler, any
+
+
