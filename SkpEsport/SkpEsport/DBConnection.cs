@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using MySql.Data;
@@ -26,7 +27,7 @@ namespace SkpEsport
             string conString = "SERVER=" + _server + ";" + "DATABASE=" +
                                _database + ";" + "UID=" + _uid + ";" + "PASSWORD=" + _password + ";";
 
-            _connection = new MySqlConnection(conString);            
+            _connection = new MySqlConnection(conString);
         }
 
 
@@ -111,22 +112,31 @@ namespace SkpEsport
         public bool UserExists(string username)
         {
             Connect();
-            var query = "select count(*) from users where username = @username;";
-            MySqlCommand cmd = new MySqlCommand(query, _connection);
-            cmd.Parameters.AddWithValue("@username", username);
 
-            this.OpenConnection();
-            int usrCheck = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-            this.CloseConnection();
+            const string query = "select count(*) from users where username = @username;";
 
-            if (usrCheck == 1)
+            MySqlCommand cmd = new MySqlCommand(query, _connection) { CommandType = CommandType.Text }; //Opretter cmd objekt af MySqlCommand og derefter initialisere objektet og angiver hvilken command type det er.
+            cmd.Parameters.AddWithValue("@username", username); //Dette bruges til parameteriserede queries. Det forhindre SQL Injections. "@username" i query variablen bliver erstattet med username variablen som bliver parset til denne method
+
+            using (cmd) //Køre sql inde i en using så resourcerne bliver disposed når sql arbejdet er færdigt
             {
-                return true;
-            }
+                cmd.Connection.Open(); //Åbner forbindelsen
+                int usrCheck = Convert.ToInt32(cmd.ExecuteScalar().ToString()); //Leder efter en bruger med bruger med brugernavnet fra "username" variablen og returnere 1 hvis den existere.
+                cmd.Connection.Close(); //Lukker forbindelsen 
 
+                if (usrCheck == 1)
+                {
+                    return true;
+                }
+
+            }
             return false;
         }
 
+        public void CreateUser(string usrname, string pwd, string email)
+        {
+            
+        }
 
     }
 }

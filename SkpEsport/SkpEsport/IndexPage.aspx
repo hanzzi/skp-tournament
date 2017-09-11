@@ -44,6 +44,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                     </li>
+                    <asp:Button ID="btn_test" OnClick="btn_test_OnClick" Text="Test" runat="server"/>
                 </ul>
             </div>
         </nav>
