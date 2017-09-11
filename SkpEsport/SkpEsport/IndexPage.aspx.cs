@@ -33,23 +33,9 @@ namespace SkpEsport
 
         protected void btn_test_OnClick(object sender, EventArgs e)
         {
-            //if (dbCon.OpenConnection())
-            //{
-            //    if (this.dbCon.UserExists("Admin"))
-            //    {
-            //        ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Admin found" + "');", true);
-            //    }
-            //    else
-            //    {
-            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Something went wrong" + "');", true);
 
-            //    }
-            //    dbCon.CloseConnection();
-            //}
             Encrypt crypt = new Encrypt();
-            string hash = string.Empty;
-
-            hash = crypt.ComputeHash("Test123");
+            string hash = crypt.ComputeHash("Test123");
             ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + hash + "');", true);
 
 
