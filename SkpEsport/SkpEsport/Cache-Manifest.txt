@@ -1,1 +1,4 @@
 ﻿CACHE MANIFEST
+
+FALLBACK
+/ /Offline.html
