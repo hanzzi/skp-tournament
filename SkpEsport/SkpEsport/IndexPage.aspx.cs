@@ -19,17 +19,14 @@ namespace SkpEsport
 
         protected void btn_login_OnClick(object sender, EventArgs e)
         {
-            Users usrs = new Users(tb_Email.Text, tb_Password.Text);
-            _dbCon.UserLogin(usrs.Username, usrs.Password);
-
-
         }
 
         protected void btn_test_OnClick(object sender, EventArgs e)
         {
-            Encrypt crypt = new Encrypt();
-            string hash = crypt.ComputeHash("Test123");
-            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + hash + "');", true);
+            //Encrypt crypt = new Encrypt();
+            //string hash = crypt.ComputeHash("Test123");
+            string test = _dbCon.CreateUser("Test", "Test123", "test@gmail.com");
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + test + "');", true);
         }
     }
 }
