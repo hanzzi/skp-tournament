@@ -158,14 +158,16 @@
                 <div class="modal-body">
                     <div class="md-form form-sm">
                         <i class="fa fa-envelope prefix"></i>
-                        <input type="text" id="form32" class="form-control">
-                        <label for="form32">Your email</label>
+                        <%--<input type="text" id="form32" class="form-control">--%>
+                        <asp:TextBox ID="tb_RegEmail" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label for="tb_RegEmail">Your email</label>
                     </div>
 
                     <div class="md-form form-sm">
                         <i class="fa fa-lock prefix"></i>
-                        <input type="password" id="form33" class="form-control">
-                        <label for="form33">Your password</label>
+                        <%--<input type="password" id="form33" class="form-control">--%>
+                        <asp:TextBox ID="tb_RegPassword" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label for="tb_RegPassword">Your password</label>
                     </div>
 
                     <div class="md-form form-sm">

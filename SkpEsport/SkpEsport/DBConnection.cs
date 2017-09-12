@@ -11,6 +11,7 @@ namespace SkpEsport
     public class DbConnection
     {
         private MySqlConnection _connection;
+        Encrypt _crypt = new Encrypt();
         private string _server;
         private string _database;
         private string _uid;
@@ -109,7 +110,43 @@ namespace SkpEsport
             }
         }
 
-        public bool UserExists(string username)
+        public bool UserLogin(string usr, string pwd)
+        {
+            Connect();
+            string query = "select Password from usr_Table where Username=@pwd";
+            string dbPwd;
+            MySqlCommand cmd = new MySqlCommand(query, _connection) {CommandType = CommandType.Text};
+            cmd.Parameters.AddWithValue("@pwd", usr);
+
+            using (cmd)
+            {
+                cmd.Connection.Open();
+                dbPwd = cmd.ExecuteScalar().ToString();
+                cmd.Connection.Close();
+            }
+
+            //TODO: heck for usernam & password
+            if (UserExists(usr)) //if user exists check for password
+            {
+                if (PwdChk(pwd, dbPwd))//if password matches allow login
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        private bool PwdChk(string pwd, string dbPwd)
+        {
+            if (string.Equals(pwd, dbPwd))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool UserExists(string username)
         {
             Connect();
 
@@ -133,7 +170,47 @@ namespace SkpEsport
             return false;
         }
 
-        public void CreateUser(string usrname, string pwd, string email)
+        public string CreateUser(string usrname, string pwd, string email)
+        {
+            Connect();
+            string query = "INSERT INTO users(username, password, email) VALUES (@username, @password, @email)";
+            bool usrCheck = UserExists(usrname);
+            string error = string.Empty;
+            MySqlCommand cmd = new MySqlCommand(query, _connection);
+            cmd.Parameters.AddWithValue("@username",usrname);
+            cmd.Parameters.AddWithValue("@password", _crypt.ComputeHash(pwd));
+            cmd.Parameters.AddWithValue("@email", email);
+
+            try
+            {
+                using (cmd) //Using statement gør at resources bliver frigivet efter at koden i ens using statement er blevet udført
+                {
+                    cmd.Connection.Open();
+                    if (usrCheck)
+                    {
+                        return "A user with that username already exists";
+                    }
+                    else
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    cmd.Connection.Close();
+                }
+
+            }
+            catch (MySqlException e)
+            {
+                error = e.ToString();
+            }
+            return error;
+        }
+
+        public void UpdateUser()
+        {
+            
+        }
+
+        public void DeleteUser()
         {
             
         }
