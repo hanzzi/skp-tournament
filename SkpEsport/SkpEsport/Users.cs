@@ -13,5 +13,27 @@ namespace SkpEsport
         public string Username { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public string Rank { get; set; }
+        public string Team { get; set; }
+        public string Temp { get; set; }
+
+        public Users()
+        {
+            
+        }
+
+        public Users(string username, string password)
+        {
+            Username = username;
+            Password = password;
+
+        }
+
+        public Users(string username, string password, string email)
+        {
+            Username = username;
+            Password = password;
+            Email = email;
+        }
     }
 }
