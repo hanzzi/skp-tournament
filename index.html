@@ -14,13 +14,27 @@
 		<link href="./node_modules/mdbootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Material Design Bootstrap -->
 		<link href="./node_modules/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+
+		<style>
+			body {
+				padding-top: 60px;
+				background-color: #708D81;
+			}
+			.starter-template {
+				padding: 40px 15px;
+				text-align: center;
+			}
+			.bg-custom {
+				background-color: #BF0603 !important;
+			}
+		</style>
 	</head>
 
 	<body>
 
 		<!--Main Navigation-->
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark bg-black scrolling-navbar fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-custom scrolling-navbar fixed-top">
 				<a class="navbar-brand" href="#"><strong>SKP eSport</strong></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				 aria-expanded="false" aria-label="Toggle navigation">
@@ -60,8 +74,6 @@
 		</header>
 		<!--Main Navigation-->
 
-		<br><br><br>
-
 
 		<!-- Main layout-->
 
@@ -69,40 +81,50 @@
 
 			<div class="main-wrapper">
 
+					<div class="container">
+							
+						<div class="starter-template">
+							<h1>SKP esport  website</h1>
+							<p class="lead">click on a image to see the score list</p>
+						</div>
+			
+					</div><!-- /.container -->
+
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/overwatch.png" class="img-fluid mx-auto d-block" alt="">
+								<img src="imgs/CSGO.svg" class="img-fluid ">
 							</a>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/csgo.png" class="img-fluid mx-auto d-block" alt="">
+								<img src="imgs/OW.svg" class="img-fluid ">
 							</a>
 							</div>
 						</div>
-					</div>
+					<!-- </div>
 
-					<div class="row">
-						<div class="col-md-6">
+					<div class="row"> -->
+						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/hots.png" class="img-fluid mx-auto d-block" alt="">
+								<img src="imgs/LOL.svg" class="img-fluid ">
 							</a>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/lol.png" class="img-fluid mx-auto d-blocks" alt="">
+								<img src="imgs/HOTS.svg" class="img-fluid ">
 							<a/>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</main>
