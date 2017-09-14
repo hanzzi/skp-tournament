@@ -113,33 +113,39 @@ namespace SkpEsport
         public bool UserLogin(string usr, string pwd)
         {
             Connect();
-            string query = "select Password from usr_Table where Username=@pwd";
-            string dbPwd;
+            string query = "select Password from users where Username=@usr";
+
             MySqlCommand cmd = new MySqlCommand(query, _connection) {CommandType = CommandType.Text};
-            cmd.Parameters.AddWithValue("@pwd", usr);
+            cmd.Parameters.AddWithValue("@usr", usr);
 
-            using (cmd)
-            {
-                cmd.Connection.Open();
-                dbPwd = cmd.ExecuteScalar().ToString();
-                cmd.Connection.Close();
-            }
 
-            //TODO: heck for usernam & password
+            //TODO: check for username & password
             if (UserExists(usr)) //if user exists check for password
             {
+                cmd.Connection.Open();
+                string dbPwd;
+                using (cmd)
+                {
+                     dbPwd = cmd.ExecuteScalar().ToString();
+                }
+                cmd.Connection.Close();
+
                 if (PwdChk(pwd, dbPwd))//if password matches allow login
                 {
                     return true;
                 }
             }
+
+
             return false;
         }
 
 
         private bool PwdChk(string pwd, string dbPwd)
         {
-            if (string.Equals(pwd, dbPwd))
+            string test = _crypt.GenerateSha512String(pwd);
+
+            if (string.Equals(test, dbPwd))
             {
                 return true;
             }
@@ -178,7 +184,7 @@ namespace SkpEsport
             string error = string.Empty;
             MySqlCommand cmd = new MySqlCommand(query, _connection);
             cmd.Parameters.AddWithValue("@username",usrname);
-            cmd.Parameters.AddWithValue("@password", _crypt.ComputeHash(pwd));
+            cmd.Parameters.AddWithValue("@password", _crypt.GenerateSha512String(pwd));
             cmd.Parameters.AddWithValue("@email", email);
 
             try
@@ -210,9 +216,19 @@ namespace SkpEsport
             
         }
 
-        public void DeleteUser()
+        public void DeleteUser(string usr)
         {
-            
+            Connect();
+            const string query = "delete from users where username = @usr";
+            MySqlCommand cmd = new MySqlCommand(query, _connection);
+            cmd.Parameters.AddWithValue("@usr", usr);
+
+            using (_connection)
+            {
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+            }
         }
 
     }
