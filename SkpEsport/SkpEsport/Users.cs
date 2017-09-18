@@ -41,5 +41,14 @@ namespace SkpEsport
         {
             
         }
+
+        public bool ValidateLogin()
+        {
+            if (UserLogin(Username, Password))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

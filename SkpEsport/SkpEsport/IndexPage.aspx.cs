@@ -14,11 +14,13 @@ namespace SkpEsport
         private readonly DbConnection _dbCon = new DbConnection();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btn_login_OnClick(object sender, EventArgs e)
         {
+            Users user = new Users(this.tb_Email.Text, this.tb_Password.Text);
+            bool isValid = user.ValidateLogin();
         }
 
         protected void btn_test_OnClick(object sender, EventArgs e)
@@ -31,9 +33,6 @@ namespace SkpEsport
             //{
             //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
             //}
-            string test = _dbCon.CheckConnection();
-            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + test + "');", true);
-
         }
     }
 }

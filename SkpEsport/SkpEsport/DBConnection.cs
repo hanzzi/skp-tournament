@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
-using System.Data.Sql;
-using System.Data.SqlClient;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -13,42 +10,42 @@ namespace SkpEsport
 {
     public class DbConnection
     {
-        private readonly SqlConnection _conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conString"].ConnectionString);// Gets the connectionstring from Web.config
         private MySqlConnection _connection;
         Encrypt _crypt = new Encrypt();
-        //private string _server;
-        //private string _database;
-        //private string _uid;
-        //private string _password;
+        private string _server;
+        private string _database;
+        private string _uid;
+        private string _password;
 
 
-        //private void Connect()
-        //{
-        //    _server = "127.0.0.1";
-        //    _database = "dankdb";
-        //    _uid = "Admin";
-        //    _password = "admin123";
+        private void Connect()
+        {
+            _server = "127.0.0.1";
+            _database = "dankdb";
+            _uid = "Admin";
+            _password = "admin123";
 
-        //    string conString = "SERVER=" + _server + ";" + "DATABASE=" +
-        //                       _database + ";" + "UID=" + _uid + ";" + "PASSWORD=" + _password + ";";
+            string conString = "SERVER=" + _server + ";" + "DATABASE=" +
+                               _database + ";" + "UID=" + _uid + ";" + "PASSWORD=" + _password + ";";
 
-        //    _connection = new MySqlConnection(conString);
-        //}
+            _connection = new MySqlConnection(conString);
+        }
 
 
 
         /**
             This is just a test function for testing the connection to the database. 
          */
+
         public string CheckConnection()
         {
+            Connect();
             try
             {
-                _conn.Open();
+                _connection.Open();
                 return "Connection success";
-
             }
-            catch (SqlException e)
+            catch (MySqlException e)
             {
                 string errorString = "";
                 switch (e.Number)
@@ -70,12 +67,56 @@ namespace SkpEsport
             }
         }
 
+        public bool OpenConnection()
+        {
+            Connect();
+            try
+            {
+                _connection.Open();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                //When handling errors, you can your application's response based 
+                //on the error number.
+                //The two most common error numbers when connecting are as follows:
+                //0: Cannot connect to server.
+                //1045: Invalid user name and/or password.
+                switch (ex.Number)
+                {
+                    case 0:
+                        //unable to connect
+                        break;
+
+                    case 1045:
+                        //Invalid username/password,
+                        break;
+                }
+                return false;
+            }
+        }
+
+
+        public bool CloseConnection()
+        {
+            Connect();
+            try
+            {
+                _connection.Close();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                return false;
+            }
+        }
 
         public bool UserLogin(string usr, string pwd)
         {
+            Connect();
             string query = "select Password from users where Username=@usr";
 
-            MySqlCommand cmd = new MySqlCommand(query, _connection) {CommandType = CommandType.Text};
+            MySqlCommand cmd = new MySqlCommand(query, _connection) { CommandType = CommandType.Text };
             cmd.Parameters.AddWithValue("@usr", usr);
 
 
@@ -86,7 +127,7 @@ namespace SkpEsport
                 string dbPwd;
                 using (cmd)
                 {
-                     dbPwd = cmd.ExecuteScalar().ToString();
+                    dbPwd = cmd.ExecuteScalar().ToString();
                 }
                 cmd.Connection.Close();
 
@@ -114,6 +155,7 @@ namespace SkpEsport
 
         private bool UserExists(string username)
         {
+            Connect();
 
             const string query = "select count(*) from users where username = @username;";
 
@@ -137,11 +179,12 @@ namespace SkpEsport
 
         public string CreateUser(string usrname, string pwd, string email)
         {
+            Connect();
             string query = "INSERT INTO users(username, password, email) VALUES (@username, @password, @email)";
             bool usrCheck = UserExists(usrname);
             string error = string.Empty;
             MySqlCommand cmd = new MySqlCommand(query, _connection);
-            cmd.Parameters.AddWithValue("@username",usrname);
+            cmd.Parameters.AddWithValue("@username", usrname);
             cmd.Parameters.AddWithValue("@password", _crypt.GenerateSha512String(pwd));
             cmd.Parameters.AddWithValue("@email", email);
 
@@ -171,11 +214,12 @@ namespace SkpEsport
 
         public void UpdateUser()
         {
-            
+
         }
 
         public void DeleteUser(string usr)
         {
+            Connect();
             const string query = "delete from users where username = @usr";
             MySqlCommand cmd = new MySqlCommand(query, _connection);
             cmd.Parameters.AddWithValue("@usr", usr);
