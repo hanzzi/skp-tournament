@@ -49,13 +49,13 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.TextBox tb_Password;
         
         /// <summary>
-        /// btn_login2 control.
+        /// btn_login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_login2;
+        protected global::System.Web.UI.WebControls.LinkButton btn_login;
         
         /// <summary>
         /// tb_RegEmail control.
@@ -67,6 +67,15 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.TextBox tb_RegEmail;
         
         /// <summary>
+        /// tb_RegUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_RegUsername;
+        
+        /// <summary>
         /// tb_RegPassword control.
         /// </summary>
         /// <remarks>
@@ -74,5 +83,23 @@ namespace SkpEsport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_RegPassword;
+        
+        /// <summary>
+        /// tb_ReapetRegPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_ReapetRegPassword;
+        
+        /// <summary>
+        /// btn_RegisterUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btn_RegisterUser;
     }
 }

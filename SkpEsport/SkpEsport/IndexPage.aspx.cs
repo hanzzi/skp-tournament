@@ -23,14 +23,17 @@ namespace SkpEsport
 
         protected void btn_test_OnClick(object sender, EventArgs e)
         {
-            if (_dbCon.UserLogin("Test", "Test123"))
-            {
-                Response.Redirect("LoginTest.aspx");
-            }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
-            }
+            //if (_dbCon.UserLogin("Test", "Test123"))
+            //{
+            //    Response.Redirect("LoginTest.aspx");
+            //}
+            //else
+            //{
+            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
+            //}
+            string test = _dbCon.CheckConnection();
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + test + "');", true);
+
         }
     }
 }

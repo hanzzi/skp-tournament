@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SkpEsport
 {
-    public class Users
+    public class Users:DbConnection
     {
         /*Properties for users
          * use this class as a template for users
@@ -34,6 +34,12 @@ namespace SkpEsport
             Username = username;
             Password = password;
             Email = email;
+        }
+
+
+        public void RegisterUser()
+        {
+            
         }
     }
 }
