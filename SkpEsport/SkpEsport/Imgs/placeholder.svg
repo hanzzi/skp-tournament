@@ -1,0 +1,1 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'><rect width='100%' height='100%' fill='crimson'/><line x1='0' x2='1920' y1='0' y2='1080' stroke='gainsboro'/> <line x1='1920' x2='0' y1='0' y2='1080' stroke='gainsboro'/><text x='960' y='545' font-size='20' font='Verdana, sans-serif' fill='white' text-anchor='middle'>1920 x 1080</text></svg>
