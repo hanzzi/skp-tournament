@@ -11,7 +11,7 @@ namespace SkpEsport
 {
     public class Encrypt
     {
-
+        private static readonly List<string> AuthVals = new List<string>(new string[] { "´x2c3v4b55gouhi4g7fkfh", "mzmzka39tgfriueh693nspgi", "akakiqyugbng49sdgrhry4s", "m009385ngodu58yhnws0fgbg05ugbso0"});
 
         public string GenerateSha256String(string inputString)
         {
@@ -39,7 +39,26 @@ namespace SkpEsport
             return result.ToString();
         }
 
+        public string GetAuthVal()
+        {
+            Random rand = new Random();
 
+            int random = rand.Next(0, 3);
 
+            return GenerateSha512String(AuthVals[random]);
+        }
+
+        public bool CheckAuth(string AuthVal)
+        {
+            foreach (string val in AuthVals)
+            {
+                var shaVal = GenerateSha512String(val);
+                if (shaVal == AuthVal)
+                {
+                    return true;
+                }                
+            }
+            return false;
+        }
     }
 }
