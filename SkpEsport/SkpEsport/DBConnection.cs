@@ -114,10 +114,10 @@ namespace SkpEsport
         public bool UserLogin(string usr, string pwd)
         {
             Connect();
-            string query = "select Password from users where Username=@usr";
+            string query = "select Password from users where email=@mail";
 
             MySqlCommand cmd = new MySqlCommand(query, _connection) { CommandType = CommandType.Text };
-            cmd.Parameters.AddWithValue("@usr", usr);
+            cmd.Parameters.AddWithValue("@mail", usr);
 
 
             //TODO: check for username & password
@@ -131,13 +131,11 @@ namespace SkpEsport
                 }
                 cmd.Connection.Close();
 
-                if (PwdChk(pwd, dbPwd))//if password matches allow login
+                if (PwdChk(pwd, dbPwd)) //if password matches allow login
                 {
                     return true;
                 }
             }
-
-
             return false;
         }
 
@@ -157,22 +155,22 @@ namespace SkpEsport
         {
             Connect();
 
-            const string query = "select count(*) from users where username = @username;";
-
+            const string query = "select count(*) from users where email = @mail;";
             MySqlCommand cmd = new MySqlCommand(query, _connection) { CommandType = CommandType.Text }; //Opretter cmd objekt af MySqlCommand og derefter initialisere objektet og angiver hvilken command type det er.
-            cmd.Parameters.AddWithValue("@username", username); //Dette bruges til parameteriserede queries. Det forhindre SQL Injections. "@username" i query variablen bliver erstattet med username variablen som bliver parset til denne method
-
+            cmd.Parameters.AddWithValue("@mail", username); //Dette bruges til parameteriserede queries. Det forhindre SQL Injections. "@username" i query variablen bliver erstattet med username variablen som bliver parset til denne method
             using (cmd) //Køre sql inde i en using så resourcerne bliver disposed når sql arbejdet er færdigt
             {
-                cmd.Connection.Open(); //Åbner forbindelsen
-                int usrCheck = Convert.ToInt32(cmd.ExecuteScalar().ToString()); //Leder efter en bruger med bruger med brugernavnet fra "username" variablen og returnere 1 hvis den existere.
-                cmd.Connection.Close(); //Lukker forbindelsen 
-
-                if (usrCheck == 1)
+                if (OpenConnection())
                 {
-                    return true;
-                }
+                    cmd.Connection.Open(); //Åbner forbindelsen
+                    int usrCheck = Convert.ToInt32(cmd.ExecuteScalar().ToString()); //Leder efter en bruger med bruger med brugernavnet fra "username" variablen og returnere 1 hvis den existere.
+                    cmd.Connection.Close(); //Lukker forbindelsen 
 
+                    if (usrCheck == 1)
+                    {
+                        return true;
+                    }
+                }
             }
             return false;
         }
@@ -190,7 +188,8 @@ namespace SkpEsport
 
             try
             {
-                using (cmd) //Using statement gør at resources bliver frigivet efter at koden i ens using statement er blevet udført
+                using (cmd
+                ) //Using statement gør at resources bliver frigivet efter at koden i ens using statement er blevet udført
                 {
                     cmd.Connection.Open();
                     if (usrCheck)
@@ -211,15 +210,9 @@ namespace SkpEsport
             }
             return error;
         }
-
-        public void UpdateUser()
-        {
-
-        }
-
         public void DeleteUser(string usr)
         {
-            Connect();
+
             const string query = "delete from users where username = @usr";
             MySqlCommand cmd = new MySqlCommand(query, _connection);
             cmd.Parameters.AddWithValue("@usr", usr);
@@ -231,6 +224,11 @@ namespace SkpEsport
                 cmd.Connection.Close();
             }
         }
+        public void UpdateUser()
+        {
+
+        }
 
     }
+
 }

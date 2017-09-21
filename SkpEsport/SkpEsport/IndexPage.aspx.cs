@@ -37,12 +37,26 @@ namespace SkpEsport
             Users user = new Users(this._loginName, this._loginPassword);
             bool isValid = user.ValidateLogin();
 
-            if (isValid)
+            if (_dbCon.OpenConnection())
             {
-                Session["Username"] = _test;
-                Session["IsAuth"] = _crypt.GetAuthVal();
-                
+                if (isValid)
+                {
+                    Session["Username"] = tb_Email.Text;
+                    Session["IsAuth"] = _crypt.GetAuthVal();
+                    lbl_User.Text = Session["Username"].ToString();
+
+                    //Response.Redirect("LoginTest.aspx");
+                }
+                else
+                {
+                  ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Something went wrong" + "');", true);
+                }
             }
+            else
+            {
+                  ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Connection Failed" + "');", true);
+            }
+
         }
 
         protected void btn_test_OnClick(object sender, EventArgs e)
@@ -65,6 +79,7 @@ namespace SkpEsport
             //{
             //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
             //}
+            Response.Redirect("LoginTest.aspx");
         }
     }
 }

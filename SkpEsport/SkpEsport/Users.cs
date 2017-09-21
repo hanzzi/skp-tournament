@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MySql.Data.MySqlClient;
 
 namespace SkpEsport
 {
-    public class Users:DbConnection
+    public class Users
     {
+        private DbConnection _dbCon = new DbConnection();
         /*Properties for users
          * use this class as a template for users
          */
@@ -19,7 +21,7 @@ namespace SkpEsport
 
         public Users()
         {
-            
+
         }
 
         public Users(string username, string password)
@@ -39,16 +41,23 @@ namespace SkpEsport
 
         public void RegisterUser()
         {
-            
+
         }
 
         public bool ValidateLogin()
         {
-            if (UserLogin(Username, Password))
-            {
-                return true;
-            }
+            return _dbCon.UserLogin(Username, Password);
+        }
+
+        public bool Delete()
+        {
+            _dbCon.DeleteUser(Username);
+
             return false;
         }
+
+
+
+
     }
 }

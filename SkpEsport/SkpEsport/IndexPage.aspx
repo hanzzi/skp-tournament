@@ -36,6 +36,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#createTeam">Create Team</a>
                         </li>
+                        <li class="nav-item">
+                            <asp:label CssClass="nav-link" ID="lbl_User" runat="server">User Info...</asp:label>
+                        </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
