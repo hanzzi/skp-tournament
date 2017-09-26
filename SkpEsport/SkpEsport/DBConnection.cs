@@ -11,7 +11,7 @@ namespace SkpEsport
     public class DbConnection
     {
         private MySqlConnection _connection;
-        Encrypt _crypt = new Encrypt();
+        private Encrypt _crypt = new Encrypt();
         private string _server;
         private string _database;
         private string _uid;
