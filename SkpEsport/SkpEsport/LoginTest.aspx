@@ -21,6 +21,9 @@
         <p class="text-info"> User: </p><asp:Label CssClass="label label-info" ID="lbl_test1" runat="server"></asp:Label><br />
         <br/>
         <p class="text-info"> AuthVal: </p><asp:Label CssClass="label label-info" ID="lbl_test2" runat="server"></asp:Label><br />
+       
+         <asp:Label ID="lbl_Session" Text=" --- " runat="server"></asp:Label>
+
         <br/>
         <asp:Button ID="btn_DbStuff" CssClass="btn btn-danger" Text="Db test" OnClick="btn_DbStuff_OnClick" runat="server"/>
 

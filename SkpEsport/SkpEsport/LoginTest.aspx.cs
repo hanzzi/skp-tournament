@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -24,8 +26,17 @@ namespace SkpEsport
 
                 if (_crypt.CheckAuth(_auth))
                 {
-                    lbl_test1.Text = _usr;
-                    lbl_test2.Text = _auth;
+                    //lbl_test1.Text = _usr;
+                    //lbl_test2.Text = _auth;
+                    //lbl_Session.Text = "Session Info: " + Session.SessionID + " -------- " + Session["IsAuth"] + " ----------- ";
+                    var sessiontest = new StringBuilder();
+                    foreach (string key in Session.Keys)
+                    {
+                        //Response.Write(key + " - " + Session[key] + "<br />");
+
+                        sessiontest.Append(key + " - " + Session[key] + "<br />");
+                    }
+                    lbl_Session.Text = sessiontest.ToString();
                 }
                 else
                 {

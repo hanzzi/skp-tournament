@@ -27,21 +27,15 @@ namespace SkpEsport
         {
             _loginName = tb_Email.Text;
             _loginPassword = tb_Password.Text;
-            
 
-            Encrypt crypt2 = new Encrypt();
-            if (Session["IsAuth"] != null)
-            {
-                if (_crypt.CheckAuth(Session["IsAuth"].ToString()))
-                {
-                ScriptMngr1.EnablePartialRendering = false;
+            //if (Session["IsAuth"] != null)
+            //{
+            //    if (_crypt.CheckAuth(Session["IsAuth"].ToString()))
+            //    {
+            //    }
+            //}
 
-                }
-            }
-            else
-            {
-                ScriptMngr1.EnablePartialRendering = true;
-            }
+
         }
 
         /*
@@ -59,17 +53,15 @@ namespace SkpEsport
                     Session["Username"] = tb_Email.Text;
                     Session["IsAuth"] = _crypt.GetAuthVal();
                     lbl_User.Text = Session["Username"].ToString();
-
-                    Response.Redirect("LoginTest.aspx");
                 }
                 else
                 {
-                  ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
+                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
                 }
             }
             else
             {
-                  ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Connection Failed" + "');", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Connection Failed" + "');", true);
             }
 
         }

@@ -40,6 +40,15 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.Label lbl_test2;
         
         /// <summary>
+        /// lbl_Session control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_Session;
+        
+        /// <summary>
         /// btn_DbStuff control.
         /// </summary>
         /// <remarks>

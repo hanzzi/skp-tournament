@@ -20,9 +20,6 @@
 </head>
 <body>
     <form id="WebContentForm" runat="server">
-    <asp:ScriptManager ID="ScriptMngr1" runat="server"></asp:ScriptManager>
-        
-
         <!--Main Navigation-->
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-black scrolling-navbar fixed-top">
@@ -65,11 +62,8 @@
 
 
         <!-- Main layout-->
-
         <main>
-
             <div class="main-wrapper">
-
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
@@ -102,53 +96,48 @@
 
         <!-- End of Main layout -->
 
-
         <!--Modal: Login Form-->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
             <div class="modal-dialog cascading-modal" role="document">
 
-                <asp:UpdatePanel ID="LoginModalPanel" runat="server" ChildrenAsTriggers="False" aria-hidden="true">
-                    <ContentTemplate>
-                        <!--Content-->
-                        <div class="modal-content">
-                            <!--Header-->
-                            <div class="modal-header bg-dark darken-3 white-text">
-                                <h4 class="title"><i class="fa fa-user"></i>Log in</h4>
-                                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <!--Body-->
-                            <div class="modal-body">
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-envelope prefix"></i>
-                                    <asp:TextBox ID="tb_Email" CssClass="form-control" runat="server"></asp:TextBox>
-                                    <label for="tb_Email">Your email</label>
-                                </div>
-
-                                <div class="md-form form-sm">
-                                    <i class="fa fa-lock prefix"></i>
-                                    <asp:TextBox ID="tb_Password" CssClass="form-control" runat="server"></asp:TextBox>
-                                    <label for="tb_Password">Your password</label>
-                                </div>
-                                <div class="text-center mt-2">
-                                    <asp:LinkButton ID="btn_login" CssClass="btn btn-info" OnClick="btn_login_OnClick" runat="server">Log in <i class="fa fa-sign-in"></i></asp:LinkButton>
-                                </div>
-                                <%--<asp:Login ID="UserLogin" runat="server"></asp:Login>--%>
-                            </div>
-                            <!--Footer-->
-                            <div class="modal-footer">
-                                <div class="options text-left col-md-6">
-                                    <p id="noAccount">Not a member? <a href="#">Sign Up</a></p>
-                                </div>
-                                <div class="options text-right col-md-6">
-                                    <p id="forgotPassword">Forgot <a href="#">Password?</a></p>
-                                </div>
-                            </div>
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header bg-dark darken-3 white-text">
+                        <h4 class="title"><i class="fa fa-user"></i>Log in</h4>
+                        <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="md-form form-sm">
+                            <i class="fa fa-envelope prefix"></i>
+                            <asp:TextBox ID="tb_Email" CssClass="form-control" runat="server"></asp:TextBox>
+                            <label for="tb_Email">Your email</label>
                         </div>
-                        <!--/.Content-->
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+
+                        <div class="md-form form-sm">
+                            <i class="fa fa-lock prefix"></i>
+                            <asp:TextBox ID="tb_Password" CssClass="form-control" runat="server"></asp:TextBox>
+                            <label for="tb_Password">Your password</label>
+                        </div>
+                        <div class="text-center mt-2">
+                            <asp:LinkButton ID="btn_login" CssClass="btn btn-info" OnClick="btn_login_OnClick" runat="server">Log in <i class="fa fa-sign-in"></i></asp:LinkButton>
+                        </div>
+                        <%--<asp:Login ID="UserLogin" runat="server"></asp:Login>--%>
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <div class="options text-left col-md-6">
+                            <p id="noAccount">Not a member? <a href="#">Sign Up</a></p>
+                        </div>
+                        <div class="options text-right col-md-6">
+                            <p id="forgotPassword">Forgot <a href="#">Password?</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
             </div>
         </div>
         <!--End of Modal: Login Form-->
@@ -288,7 +277,7 @@
         <script type="text/javascript" src="./node_modules/mdbootstrap/js/mdb.min.js"></script>
 
         <script>
-            $('#loginModal').modal('show')
+            //$('#loginModal').modal('show')
 
             $("#forgotPassword").click(function () {
                 $('#loginModal').modal('hide')
