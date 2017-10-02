@@ -131,6 +131,7 @@
     <Content Include="Cache-Manifest.txt" />
     <Content Include="index.html" />
     <Content Include="IndexPage.aspx" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="LoginTest.aspx" />
     <Content Include="node_modules\mdbootstrap\css\bootstrap.css" />
     <Content Include="node_modules\mdbootstrap\css\bootstrap.min.css" />
@@ -282,6 +283,13 @@
     </Compile>
     <Compile Include="IndexPage.aspx.designer.cs">
       <DependentUpon>IndexPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginTest.aspx.cs">
       <DependentUpon>LoginTest.aspx</DependentUpon>
