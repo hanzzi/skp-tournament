@@ -18,12 +18,15 @@
 		<style>
 			body {
 				padding-top: 60px;
-				background-color: #708D81;
+				background-color: rgb(205, 219, 213);
+
 			}
+
 			.starter-template {
 				padding: 40px 15px;
 				text-align: center;
 			}
+
 			.bg-custom {
 				background-color: #BF0603 !important;
 			}
@@ -35,15 +38,19 @@
 		<!--Main Navigation-->
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark bg-custom scrolling-navbar fixed-top">
-				<a class="navbar-brand" href="#"><strong>SKP eSport</strong></a>
+				<a class="navbar-brand" href="#">
+					<strong>SKP eSport</strong>
+				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 				 aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+					<span class="navbar-toggler-icon"></span>
+				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="#">Home
+								<span class="sr-only">(current)</span>
+							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#" data-toggle="modal" data-target="#createTeam">Create Team</a>
@@ -81,512 +88,542 @@
 
 			<div class="main-wrapper">
 
-					<div class="container">
-							
-						<div class="starter-template">
-							<h1>SKP esport  website</h1>
-							<p class="lead">click on a image to see the score list</p>
-						</div>
-			
-					</div><!-- /.container -->
+				<div class="container">
+
+					<div class="starter-template">
+						<h1>SKP esport website</h1>
+						<p class="lead">click on a image to see the score list</p>
+					</div>
+
+				</div>
+				<!-- /.container -->
 
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/CSGO.svg" class="img-fluid ">
-							</a>
+									<img src="imgs/CSGO.svg" class="img-fluid ">
+								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/OW.svg" class="img-fluid ">
-							</a>
+									<img src="imgs/OW.svg" class="img-fluid ">
+								</a>
 							</div>
 						</div>
-					<!-- </div>
+						<!-- </div>
 
 					<div class="row"> -->
 						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/LOL.svg" class="img-fluid ">
-							</a>
+									<img src="imgs/LOL.svg" class="img-fluid ">
+								</a>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="view hm-zoom">
 								<a href="game-score-list.html">
-								<img src="imgs/HOTS.svg" class="img-fluid ">
-							<a/>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</main>
-
-	<!-- End of Main layout -->
-
-
-	<!--Modal: Login Form-->
-	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
-		<div class="modal-dialog cascading-modal" role="document">
-			<!--Content-->
-			<div class="modal-content">
-
-				<!--Header-->
-				<div class="modal-header bg-dark darken-3 white-text">
-					<h4 class="title"><i class="fa fa-user"></i> Log in</h4>
-					<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<!--Body-->
-				<div class="modal-body">
-					<div class="md-form form-sm">
-						<i class="fa fa-envelope prefix"></i>
-						<input type="text" id="form1" class="form-control">
-						<label for="form1">Your email</label>
-					</div>
-
-					<div class="md-form form-sm">
-						<i class="fa fa-lock prefix"></i>
-						<input type="password" id="form2" class="form-control">
-						<label for="form2">Your password</label>
-					</div>
-
-					<div class="text-center mt-2">
-						<button class="btn btn-info">Log in <i class="fa fa-sign-in ml-1"></i></button>
-					</div>
-
-				</div>
-				<!--Footer-->
-				<div class="modal-footer">
-					<div class="options text-left col-md-6">
-						<p id="noAccount">Not a member? <a href="#">Sign Up</a></p>
-							</div>
-							<div class="options text-right col-md-6">
-								<p id="forgotPassword">Forgot <a href="#">Password?</a></p>
+									<img src="imgs/" class="img-fluid ">
+									<a/>
 							</div>
 						</div>
 					</div>
-					<!--/.Content-->
+
 				</div>
 			</div>
-			<!--End of Modal: Login Form-->
+		</main>
+
+		<!-- End of Main layout -->
 
 
-			<!--Modal: Register Form-->
-			<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
-				<div class="modal-dialog cascading-modal" role="document">
-					<!--Content-->
-					<div class="modal-content">
+		<!--Modal: Login Form-->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+			<div class="modal-dialog cascading-modal" role="document">
+				<!--Content-->
+				<div class="modal-content">
 
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user-plus"></i> Register</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user"></i> Log in</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<div class="md-form form-sm">
+							<i class="fa fa-envelope prefix"></i>
+							<input type="text" id="form1" class="form-control">
+							<label for="form1">Your email</label>
 						</div>
-						<!--Body-->
-						<div class="modal-body">
-							<div class="md-form form-sm">
-								<i class="fa fa-envelope prefix"></i>
-								<input type="email" id="form3" class="form-control">
-								<label for="form3">Your email</label>
-							</div>
 
-							<div class="md-form form-sm">
-								<i class="fa fa-user prefix"></i>
-								<input type="text" id="form5" class="form-control">
-								<label for="form5">Your username</label>
-							</div>
-
-							<div class="md-form form-sm">
-								<i class="fa fa-lock prefix"></i>
-								<input type="password" id="form6" class="form-control">
-								<label for="form6">Your password</label>
-							</div>
-
-							<div class="md-form form-sm">
-								<i class="fa fa-lock prefix"></i>
-								<input type="password" id="form7" class="form-control">
-								<label for="form7">Repeat password</label>
-							</div>
-
-							<div class="text-center mt-2">
-								<button class="btn btn-info" data-toggle="modal" data-target="#tos">Sign up <i class="fa fa-sign-in ml-1"></i></button>
-							</div>
-
+						<div class="md-form form-sm">
+							<i class="fa fa-lock prefix"></i>
+							<input type="password" id="form2" class="form-control">
+							<label for="form2">Your password</label>
 						</div>
-						<!--Footer-->
-						<div class="modal-footer">
-							<div class="options text-center col-md-12 mt-1">
-								<p id="haveAccount">Already have an account? <a href="#">Log In</a></p>
-							</div>
+
+						<div class="text-center mt-2">
+							<button class="btn btn-info">Log in
+								<i class="fa fa-sign-in ml-1"></i>
+							</button>
+						</div>
+
+					</div>
+					<!--Footer-->
+					<div class="modal-footer">
+						<div class="options text-left col-md-6">
+							<p id="noAccount">Not a member?
+								<a href="#">Sign Up</a>
+							</p>
+						</div>
+						<div class="options text-right col-md-6">
+							<p id="forgotPassword">Forgot
+								<a href="#">Password?</a>
+							</p>
 						</div>
 					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!--Modal: Register Form-->
-
-
-			<!--Modal: Create Team Form-->
-			<div class="modal fade" id="createTeam" tabindex="-1" role="dialog" aria-labelledby="createTeam" aria-hidden="true">
-				<div class="modal-dialog cascading-modal" role="document">
-					<!--Content-->
-					<div class="modal-content">
-
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user"></i> Create Team</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body">
-							<div class="md-form form-sm">
-								<i class="fa fa-envelope prefix"></i>
-								<input type="text" id="form8" class="form-control">
-								<label for="form8">Your Team name</label>
-							</div>
-
-							<div class="form-row">
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> CS:GO
-              </label>
-								</div>
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Heroes of the Storm
-              </label>
-								</div>
-							</div>
-
-							<div class="form-row">
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-								<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> League of Legends
-							</label>
-								</div>
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-								<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Overwatch
-							</label>
-								</div>
-							</div>
-
-							<div class="text-center mt-2">
-								<button class="btn btn-info">Create Team <i class="fa fa-sign-in ml-1"></i></button>
-							</div>
-
-						</div>
-					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!--End of Modal: Create Team Form-->
-
-
-
-			<!--Modal: Forgot Password Form-->
-			<div class="modal fade" id="ForgotPassword" tabindex="-1" role="dialog" aria-labelledby="ForgotPassword" aria-hidden="true">
-				<div class="modal-dialog cascading-modal" role="document">
-					<!--Content-->
-					<div class="modal-content">
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user"></i> Forgot Password</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body">
-							<div class="md-form form-sm">
-								<i class="fa fa-envelope prefix"></i>
-								<input type="text" id="form9" class="form-control">
-								<label for="form9">Your email</label>
-							</div>
-
-							<div class="text-center mt-2">
-								<button class="btn btn-info">Send password <i class="fa fa-sign-in ml-1"></i></button>
-							</div>
-
-						</div>
-					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!--End of Modal: Forgot Password Form-->
-
-
-
-			<!--Modal: Rules Form-->
-			<div class="modal fade" id="tos" tabindex="-1" role="dialog" aria-labelledby="tos" aria-hidden="true">
-				<div class="modal-dialog cascading-modal" role="document">
-					<!--Content-->
-					<div class="modal-content">
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user"></i> Terms of Service</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body">
-							<div class="md-form form-sm">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a malesuada augue. Vestibulum nec sem vitae nunc condimentum
-									bibendum eu at augue. Fusce auctor, risus et tempor ullamcorper, est dui dapibus tellus, nec gravida orci ante eu
-									ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer finibus pharetra magna, nec facilisis
-									est auctor id. Cras bibendum venenatis facilisis. Praesent consequat odio iaculis orci convallis lobortis nec et
-									justo. Suspendisse eget faucibus mi. Nunc ut egestas nulla. Aenean quis leo vulputate, imperdiet felis at, dignissim
-									purus.
-								</p>
-							</div>
-
-							<div class="text-center mt-2">
-								<button class="btn btn-info" id="acceptTOS">Accept Terms of Service <i class="fa fa-sign-in ml-1"></i></button>
-							</div>
-
-						</div>
-					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!--End of Modal: Rules Form-->
-
-			<!--Modal: Rules Form for nav -->
-			<div class="modal fade" id="tosNav" tabindex="-1" role="dialog" aria-labelledby="tosNav" aria-hidden="true">
-				<div class="modal-dialog cascading-modal" role="document">
-					<!--Content-->
-					<div class="modal-content">
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user"></i> Rules</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body">
-							<div class="md-form form-sm">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a malesuada augue. Vestibulum nec sem vitae nunc condimentum
-									bibendum eu at augue. Fusce auctor, risus et tempor ullamcorper, est dui dapibus tellus, nec gravida orci ante eu
-									ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer finibus pharetra magna, nec facilisis
-									est auctor id. Cras bibendum venenatis facilisis. Praesent consequat odio iaculis orci convallis lobortis nec et
-									justo. Suspendisse eget faucibus mi. Nunc ut egestas nulla. Aenean quis leo vulputate, imperdiet felis at, dignissim
-									purus.
-								</p>
-							</div>
-
-						</div>
-					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!--End of Modal: Rules Form for nav-->
-
-			<!--Modal: Profile Form-->
-			<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
-				<div class="modal-dialog cascading-modal modal-lg" role="document">
-					<!--Content-->
-					<div class="modal-content">
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user"></i> username</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body">
-
-
-							<div class="row">
-								<div class="col-7">
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="md-form form-sm">
-												<i class="fa fa-envelope prefix"></i>
-												<input type="text" readonly class="form-control-plaintext" value="email">
-											</div>
-										</div>
-
-										<div class="col-6">
-											<div class="md-form form-sm">
-												<i class="fa fa-lock prefix"></i>
-												<input type="password" id="form10" class="form-control">
-												<label for="form10">New password</label>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="md-form pb-3 form-sm">
-												<i class="fa fa-lock prefix"></i>
-												<input type="password" id="Form-pass11" class="form-control">
-												<label for="Form-pass11">Your password</label>
-											</div>
-										</div>
-
-										<div class="col-6">
-											<div class="form-check col-md-12">
-												<label class="form-check-label">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> CS:GO
-													</label>
-											</div>
-		
-											<div class="form-check col-md-12">
-												<label class="form-check-label">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Heroes of the Storm
-													</label>
-											</div>
-		
-										</div>
-		
-										<div class="col-6">
-											<div class="form-check col-md-12">
-												<label class="form-check-label">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> League of Legends
-													</label>
-											</div>
-		
-											<div class="form-check col-md-12">
-												<label class="form-check-label">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Overwatch
-													</label>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-
-								<div class="col-5">
-									<div class="md-form">
-										<i class="fa fa-pencil prefix grey-text"></i>
-										<textarea type="text" id="Form-pass15" class="md-textarea" style="height: 200px"></textarea>
-										<label for="Form-pass15">Profile bio</label>
-									</div>
-								</div>
-
-
-							</div>
-
-							<div class="text-center mt-2">
-								<button class="btn btn-info" id="acceptTOS"> Update profile <i class="fa fa-sign-in ml-1"></i></button>
-							</div>
-
-						</div>
-					</div>
-
 				</div>
 				<!--/.Content-->
 			</div>
-			</div>
-			<!--End of Modal: Profile Form-->
+		</div>
+		<!--End of Modal: Login Form-->
 
 
+		<!--Modal: Register Form-->
+		<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+			<div class="modal-dialog cascading-modal" role="document">
+				<!--Content-->
+				<div class="modal-content">
 
-
-			<!--Modal: update Team Form-->
-			<div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModal" aria-hidden="true">
-				<div class="modal-dialog cascading-modal" role="document">
-					<!--Content-->
-					<div class="modal-content">
-
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user"></i> team name</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user-plus"></i> Register</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<div class="md-form form-sm">
+							<i class="fa fa-envelope prefix"></i>
+							<input type="email" id="form3" class="form-control">
+							<label for="form3">Your email</label>
 						</div>
-						<!--Body-->
-						<div class="modal-body">
-							<div class="md-form form-sm">
-								<i class="fa fa-envelope prefix"></i>
-								<input type="text" id="Form-pass13" class="form-control">
-								<label for="Form-pass13">Your Team name</label>
-							</div>
 
-							<div class="form-row">
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-								<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> CS:GO
-							</label>
-								</div>
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-								<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Heroes of the Storm
-							</label>
-								</div>
-							</div>
+						<div class="md-form form-sm">
+							<i class="fa fa-user prefix"></i>
+							<input type="text" id="form5" class="form-control">
+							<label for="form5">Your username</label>
+						</div>
 
-							<div class="form-row">
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-								<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> League of Legends
-							</label>
-								</div>
-								<div class="form-check col-md-6">
-									<label class="form-check-label">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Overwatch
-              </label>
-								</div>
-							</div>
+						<div class="md-form form-sm">
+							<i class="fa fa-lock prefix"></i>
+							<input type="password" id="form6" class="form-control">
+							<label for="form6">Your password</label>
+						</div>
 
-							<div class="text-center mt-2">
-								<button class="btn btn-info">Update Team <i class="fa fa-sign-in ml-1"></i></button>
-							</div>
+						<div class="md-form form-sm">
+							<i class="fa fa-lock prefix"></i>
+							<input type="password" id="form7" class="form-control">
+							<label for="form7">Repeat password</label>
+						</div>
 
+						<div class="text-center mt-2">
+							<button class="btn btn-info" data-toggle="modal" data-target="#tos">Sign up
+								<i class="fa fa-sign-in ml-1"></i>
+							</button>
+						</div>
+
+					</div>
+					<!--Footer-->
+					<div class="modal-footer">
+						<div class="options text-center col-md-12 mt-1">
+							<p id="haveAccount">Already have an account?
+								<a href="#">Log In</a>
+							</p>
 						</div>
 					</div>
-					<!--/.Content-->
 				</div>
+				<!--/.Content-->
 			</div>
-			<!--End of Modal: update Team Form-->
+		</div>
+		<!--Modal: Register Form-->
 
 
-			<script type="text/javascript" src="./node_modules/mdbootstrap/js/jquery-3.2.1.min.js"></script>
-			<!-- Bootstrap tooltips -->
-			<script type="text/javascript" src="./node_modules/mdbootstrap/js/popper.min.js"></script>
-			<!-- Bootstrap core JavaScript -->
-			<script type="text/javascript" src="./node_modules/mdbootstrap/js/bootstrap.min.js"></script>
-			<!-- MDB core JavaScript -->
-			<script type="text/javascript" src="./node_modules/mdbootstrap/js/mdb.min.js"></script>
+		<!--Modal: Create Team Form-->
+		<div class="modal fade" id="createTeam" tabindex="-1" role="dialog" aria-labelledby="createTeam" aria-hidden="true">
+			<div class="modal-dialog cascading-modal" role="document">
+				<!--Content-->
+				<div class="modal-content">
 
-			<script>
-				//$('#loginModal').modal('show')
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user"></i> Create Team</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<div class="md-form form-sm">
+							<i class="fa fa-envelope prefix"></i>
+							<input type="text" id="form8" class="form-control">
+							<label for="form8">Your Team name</label>
+						</div>
 
-				$("#forgotPassword").click(function () {
-					$('#loginModal').modal('hide')
-					$('#ForgotPassword').modal('show')
-				});
+						<div class="form-row">
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> CS:GO
+								</label>
+							</div>
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Heroes of the Storm
+								</label>
+							</div>
+						</div>
 
-				$("#haveAccount").click(function () {
-					$('#registerModal').modal('hide')
-					$('#loginModal').modal('show')
-				});
+						<div class="form-row">
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> League of Legends
+								</label>
+							</div>
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Overwatch
+								</label>
+							</div>
+						</div>
 
-				$("#noAccount").click(function () {
-					$('#loginModal').modal('hide')
-					$('#registerModal').modal('show')
-				});
+						<div class="text-center mt-2">
+							<button class="btn btn-info">Create Team
+								<i class="fa fa-sign-in ml-1"></i>
+							</button>
+						</div>
 
-				$("#acceptTOS").click(function () {
-					$('#tos').modal('hide')
-				});
-			</script>
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!--End of Modal: Create Team Form-->
+
+
+
+		<!--Modal: Forgot Password Form-->
+		<div class="modal fade" id="ForgotPassword" tabindex="-1" role="dialog" aria-labelledby="ForgotPassword" aria-hidden="true">
+			<div class="modal-dialog cascading-modal" role="document">
+				<!--Content-->
+				<div class="modal-content">
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user"></i> Forgot Password</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<div class="md-form form-sm">
+							<i class="fa fa-envelope prefix"></i>
+							<input type="text" id="form9" class="form-control">
+							<label for="form9">Your email</label>
+						</div>
+
+						<div class="text-center mt-2">
+							<button class="btn btn-info">Send password
+								<i class="fa fa-sign-in ml-1"></i>
+							</button>
+						</div>
+
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!--End of Modal: Forgot Password Form-->
+
+
+
+		<!--Modal: Rules Form-->
+		<div class="modal fade" id="tos" tabindex="-1" role="dialog" aria-labelledby="tos" aria-hidden="true">
+			<div class="modal-dialog cascading-modal" role="document">
+				<!--Content-->
+				<div class="modal-content">
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user"></i> Terms of Service</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<div class="md-form form-sm">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a malesuada augue. Vestibulum nec sem vitae nunc condimentum
+								bibendum eu at augue. Fusce auctor, risus et tempor ullamcorper, est dui dapibus tellus, nec gravida orci ante eu
+								ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer finibus pharetra magna, nec facilisis
+								est auctor id. Cras bibendum venenatis facilisis. Praesent consequat odio iaculis orci convallis lobortis nec et
+								justo. Suspendisse eget faucibus mi. Nunc ut egestas nulla. Aenean quis leo vulputate, imperdiet felis at, dignissim
+								purus.
+							</p>
+						</div>
+
+						<div class="text-center mt-2">
+							<button class="btn btn-info" id="acceptTOS">Accept Terms of Service
+								<i class="fa fa-sign-in ml-1"></i>
+							</button>
+						</div>
+
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!--End of Modal: Rules Form-->
+
+		<!--Modal: Rules Form for nav -->
+		<div class="modal fade" id="tosNav" tabindex="-1" role="dialog" aria-labelledby="tosNav" aria-hidden="true">
+			<div class="modal-dialog cascading-modal" role="document">
+				<!--Content-->
+				<div class="modal-content">
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user"></i> Rules</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<div class="md-form form-sm">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a malesuada augue. Vestibulum nec sem vitae nunc condimentum
+								bibendum eu at augue. Fusce auctor, risus et tempor ullamcorper, est dui dapibus tellus, nec gravida orci ante eu
+								ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer finibus pharetra magna, nec facilisis
+								est auctor id. Cras bibendum venenatis facilisis. Praesent consequat odio iaculis orci convallis lobortis nec et
+								justo. Suspendisse eget faucibus mi. Nunc ut egestas nulla. Aenean quis leo vulputate, imperdiet felis at, dignissim
+								purus.
+							</p>
+						</div>
+
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!--End of Modal: Rules Form for nav-->
+
+		<!--Modal: Profile Form-->
+		<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
+			<div class="modal-dialog cascading-modal modal-lg" role="document">
+				<!--Content-->
+				<div class="modal-content">
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user"></i> username</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+
+
+						<div class="row">
+							<div class="col-7">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="md-form form-sm">
+											<i class="fa fa-envelope prefix"></i>
+											<input type="text" readonly class="form-control-plaintext" value="email">
+										</div>
+									</div>
+
+									<div class="col-6">
+										<div class="md-form form-sm">
+											<i class="fa fa-lock prefix"></i>
+											<input type="password" id="form10" class="form-control">
+											<label for="form10">New password</label>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="md-form pb-3 form-sm">
+											<i class="fa fa-lock prefix"></i>
+											<input type="password" id="Form-pass11" class="form-control">
+											<label for="Form-pass11">Your password</label>
+										</div>
+									</div>
+
+									<div class="col-6">
+										<div class="form-check col-md-12">
+											<label class="form-check-label">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> CS:GO
+											</label>
+										</div>
+
+										<div class="form-check col-md-12">
+											<label class="form-check-label">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Heroes of the Storm
+											</label>
+										</div>
+
+									</div>
+
+									<div class="col-6">
+										<div class="form-check col-md-12">
+											<label class="form-check-label">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> League of Legends
+											</label>
+										</div>
+
+										<div class="form-check col-md-12">
+											<label class="form-check-label">
+												<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Overwatch
+											</label>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-5">
+								<div class="md-form">
+									<i class="fa fa-pencil prefix grey-text"></i>
+									<textarea type="text" id="Form-pass15" class="md-textarea" style="height: 200px"></textarea>
+									<label for="Form-pass15">Profile bio</label>
+								</div>
+							</div>
+
+
+						</div>
+
+						<div class="text-center mt-2">
+							<button class="btn btn-info" id="acceptTOS"> Update profile
+								<i class="fa fa-sign-in ml-1"></i>
+							</button>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<!--/.Content-->
+		</div>
+		<!--End of Modal: Profile Form-->
+
+
+
+
+		<!--Modal: update Team Form-->
+		<div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModal" aria-hidden="true">
+			<div class="modal-dialog cascading-modal" role="document">
+				<!--Content-->
+				<div class="modal-content">
+
+					<!--Header-->
+					<div class="modal-header bg-custom darken-3 white-text">
+						<h4 class="title">
+							<i class="fa fa-user"></i> team name</h4>
+						<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--Body-->
+					<div class="modal-body">
+						<div class="md-form form-sm">
+							<i class="fa fa-envelope prefix"></i>
+							<input type="text" id="Form-pass13" class="form-control">
+							<label for="Form-pass13">Your Team name</label>
+						</div>
+
+						<div class="form-row">
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> CS:GO
+								</label>
+							</div>
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Heroes of the Storm
+								</label>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> League of Legends
+								</label>
+							</div>
+							<div class="form-check col-md-6">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Overwatch
+								</label>
+							</div>
+						</div>
+
+						<div class="text-center mt-2">
+							<button class="btn btn-info">Update Team
+								<i class="fa fa-sign-in ml-1"></i>
+							</button>
+						</div>
+
+					</div>
+				</div>
+				<!--/.Content-->
+			</div>
+		</div>
+		<!--End of Modal: update Team Form-->
+
+
+		<script type="text/javascript" src="./node_modules/mdbootstrap/js/jquery-3.2.1.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="./node_modules/mdbootstrap/js/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="./node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="./node_modules/mdbootstrap/js/mdb.min.js"></script>
+
+		<script>
+			//$('#loginModal').modal('show')
+
+			$("#forgotPassword").click(function () {
+				$('#loginModal').modal('hide')
+				$('#ForgotPassword').modal('show')
+			});
+
+			$("#haveAccount").click(function () {
+				$('#registerModal').modal('hide')
+				$('#loginModal').modal('show')
+			});
+
+			$("#noAccount").click(function () {
+				$('#loginModal').modal('hide')
+				$('#registerModal').modal('show')
+			});
+
+			$("#acceptTOS").click(function () {
+				$('#tos').modal('hide')
+			});
+
+
+		</script>
 
 
 	</body>
