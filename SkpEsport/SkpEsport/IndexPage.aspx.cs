@@ -25,8 +25,8 @@ namespace SkpEsport
              */
         protected void Page_Load(object sender, EventArgs e)
         {
-            _loginName = tb_Email.Text;
-            _loginPassword = tb_Password.Text;
+            //_loginName = tb_Email.Text;
+            //_loginPassword = tb_Password.Text;
 
             //if (Session["IsAuth"] != null)
             //{
@@ -43,27 +43,7 @@ namespace SkpEsport
              */
         protected void btn_login_OnClick(object sender, EventArgs e)
         {
-            Users user = new Users(this._loginName, this._loginPassword);
-            bool isValid = user.ValidateLogin();
-
-            if (_dbCon.OpenConnection())
-            {
-                if (isValid)
-                {
-                    Session["Username"] = tb_Email.Text;
-                    Session["IsAuth"] = _crypt.GetAuthVal();
-                    lbl_User.Text = Session["Username"].ToString();
-                }
-                else
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
-                }
-            }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Connection Failed" + "');", true);
-            }
-
+          
         }
 
         protected void btn_test_OnClick(object sender, EventArgs e)

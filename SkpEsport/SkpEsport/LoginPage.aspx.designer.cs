@@ -13,31 +13,13 @@ namespace SkpEsport {
     public partial class LoginPage {
         
         /// <summary>
-        /// form1 control.
+        /// LoginForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// imgBtn_DoLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBtn_DoLogin;
-        
-        /// <summary>
-        /// imgbtn_DoRegister control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtn_DoRegister;
+        protected global::System.Web.UI.HtmlControls.HtmlForm LoginForm;
         
         /// <summary>
         /// tb_Email control.
@@ -94,21 +76,21 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.TextBox tb_RegPassword;
         
         /// <summary>
-        /// tb_ReapetRegPassword control.
+        /// tb_RegPasswordRepeat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_ReapetRegPassword;
+        protected global::System.Web.UI.WebControls.TextBox tb_RegPasswordRepeat;
         
         /// <summary>
-        /// btn_RegisterUser control.
+        /// btn_Register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_RegisterUser;
+        protected global::System.Web.UI.WebControls.LinkButton btn_Register;
     }
 }
