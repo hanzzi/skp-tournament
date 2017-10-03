@@ -41,7 +41,7 @@ namespace SkpEsport
 
         public void RegisterUser()
         {
-
+            _dbCon.CreateUser(Username, Password, Email);
         }
 
         public bool ValidateLogin()
@@ -56,8 +56,9 @@ namespace SkpEsport
             return false;
         }
 
-
-
-
+        public override string ToString()
+        {
+            return "Username: " + Username + " - Password: " + Password + " - Email: " + Email;
+        }
     }
 }

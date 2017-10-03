@@ -59,6 +59,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://discord.gg/nUpyP6M" target="_blank">Discord</a>
                         </li>
+                        <li>
+                            <asp:Button ID="btn_CloseCon"  runat="server" OnClick="btn_CloseCon_OnClick" Text="CLOSE THE CONNECTION NIGGA"/>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -102,14 +105,7 @@
                     <br>
 
                     <div class="text-center mt-2">
-                        <%--                        <button class="btn btn-info">
-                            Log in
-                           
-                            <i class="fa fa-sign-in ml-1"></i>--%>
-                        <%--</button>--%>
                         <asp:LinkButton ID="btn_login" CssClass="btn btn-info" OnClick="btn_login_OnClick" runat="server">Log in <i class="fa fa-sign-in"></i></asp:LinkButton>
-
-
                     </div>
 
                 </div>

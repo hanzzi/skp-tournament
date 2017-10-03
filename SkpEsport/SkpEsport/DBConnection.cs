@@ -178,9 +178,11 @@ namespace SkpEsport
         public string CreateUser(string usrname, string pwd, string email)
         {
             Connect();
+
             string query = "INSERT INTO users(username, password, email) VALUES (@username, @password, @email)";
             bool usrCheck = UserExists(usrname);
             string error = string.Empty;
+
             MySqlCommand cmd = new MySqlCommand(query, _connection);
             cmd.Parameters.AddWithValue("@username", usrname);
             cmd.Parameters.AddWithValue("@password", _crypt.GenerateSha512String(pwd));
@@ -188,10 +190,8 @@ namespace SkpEsport
 
             try
             {
-                using (cmd
-                ) //Using statement gør at resources bliver frigivet efter at koden i ens using statement er blevet udført
+                using (cmd) //Using statement gør at resources bliver frigivet efter at koden i ens using statement er blevet udført
                 {
-                    cmd.Connection.Open();
                     if (usrCheck)
                     {
                         return "A user with that username already exists";

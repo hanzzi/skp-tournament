@@ -10,6 +10,7 @@ namespace SkpEsport
     public partial class LoginPage : System.Web.UI.Page
     {
         private readonly DbConnection _dbCon = new DbConnection();
+        private Users _usr;
         Encrypt _crypt = new Encrypt();
         private string _loginName;
         private string _loginPassword;
@@ -49,7 +50,22 @@ namespace SkpEsport
 
         protected void btn_Register_OnClick(object sender, EventArgs e)
         {
+            if (tb_RegUsername.Text != string.Empty && tb_RegPassword.Text != string.Empty && tb_RegPasswordRepeat.Text != string.Empty && tb_RegEmail.Text != string.Empty)
+            {
 
+                Users usr = new Users(tb_RegUsername.Text, tb_RegPassword.Text, tb_RegEmail.Text);
+
+                usr.RegisterUser();
+
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + usr + "');", true);
+            }
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Fill out the registration form properly please" + "');", true);
+
+        }
+
+        protected void btn_CloseCon_OnClick(object sender, EventArgs e)
+        {
+            _dbCon.CloseConnection();
         }
     }
 }
