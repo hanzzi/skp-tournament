@@ -60,7 +60,7 @@
                             <a class="nav-link" href="https://discord.gg/nUpyP6M" target="_blank">Discord</a>
                         </li>
                         <li>
-                            <asp:Button ID="btn_CloseCon"  runat="server" OnClick="btn_CloseCon_OnClick" Text="CLOSE THE CONNECTION NIGGA"/>
+                            <asp:Button ID="btn_CloseCon" runat="server" OnClick="btn_CloseCon_OnClick" Text="CLOSE THE CONNECTION NIGGA" />
                         </li>
                     </ul>
                 </div>
@@ -87,28 +87,28 @@
 
                 <br>
                 <br>
-
                 <div class="modal-body">
                     <div class="md-form form-sm">
                         <i class="fa fa-envelope prefix"></i>
-                        <asp:TextBox ID="tb_Email" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+                        <asp:TextBox ID="tb_Email" runat="server" CssClass="form-control" TextMode="Email" ValidationGroup="LoginGroup"></asp:TextBox>
                         <label for="tb_Email">Your email</label>
-                    </div>
+                        <asp:RequiredFieldValidator runat="server" ID="emailReq" ControlToValidate="tb_Email" ErrorMessage="Email required" CssClass="text-danger" ValidationGroup="LoginGroup" Display="Dynamic"></asp:RequiredFieldValidator>
 
+                    </div>
                     <div class="md-form form-sm">
                         <i class="fa fa-lock prefix"></i>
-                        <asp:TextBox ID="tb_Password" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="tb_Password" runat="server" CssClass="form-control" TextMode="Password" ValidationGroup="LoginGroup"></asp:TextBox>
                         <label for="tb_Password">Your password</label>
+                        <asp:RequiredFieldValidator runat="server" ID="pwdReq" ControlToValidate="tb_Password" ErrorMessage="Password required" CssClass="text-danger" ValidationGroup="LoginGroup" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
-
                     <br>
                     <br>
-
                     <div class="text-center mt-2">
-                        <asp:LinkButton ID="btn_login" CssClass="btn btn-info" OnClick="btn_login_OnClick" runat="server">Log in <i class="fa fa-sign-in"></i></asp:LinkButton>
+                        <asp:LinkButton ID="btn_login" CssClass="btn btn-info" OnClick="btn_login_OnClick" runat="server" ValidationGroup="LoginGroup">Log in <i class="fa fa-sign-in"></i></asp:LinkButton>
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -127,75 +127,79 @@
                         <i class="fa fa-envelope prefix"></i>
                         <asp:TextBox ID="tb_RegEmail" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
                         <label for="tb_RegEmail">Your email</label>
+                        <asp:RequiredFieldValidator runat="server" ID="regEmailReq" ControlToValidate="tb_RegEmail" ErrorMessage="Email required" CssClass="text-danger" ValidationGroup="RegGroup" Display="Dynamic"></asp:RequiredFieldValidator>
+
                     </div>
 
                     <div class="md-form form-sm">
                         <i class="fa fa-user prefix"></i>
                         <asp:TextBox ID="tb_RegUsername" runat="server" CssClass="form-control"></asp:TextBox>
                         <label for="tb_RegUsername">Your username</label>
+                        <asp:RequiredFieldValidator runat="server" ID="regUsernameReq" ControlToValidate="tb_RegUsername" ErrorMessage="Username required" CssClass="text-danger" ValidationGroup="RegGroup" Display="Dynamic"></asp:RequiredFieldValidator>
+
                     </div>
 
                     <div class="md-form form-sm">
                         <i class="fa fa-lock prefix"></i>
                         <asp:TextBox ID="tb_RegPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
                         <label for="tb_RegPassword">Your password</label>
+                        <asp:RequiredFieldValidator runat="server" ID="regPasswordReq" ControlToValidate="tb_RegPassword" ErrorMessage="Password required" CssClass="text-danger" ValidationGroup="RegGroup" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
 
                     <div class="md-form form-sm">
                         <i class="fa fa-lock prefix"></i>
                         <asp:TextBox ID="tb_RegPasswordRepeat" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
                         <label for="tb_RegPasswordRepeat">Repeat password</label>
+                        <asp:RequiredFieldValidator runat="server" ID="regRepPwdReq" ControlToValidate="tb_RegPasswordRepeat" ErrorMessage="Repeat Password required" CssClass="text-danger" ValidationGroup="RegGroup" Display="Dynamic"></asp:RequiredFieldValidator>
+
                     </div>
 
                     <br>
                     <br>
 
                     <div class="text-center mt-2">
-                        <%--                        <button class="btn btn-info" data-toggle="modal" data-target="#tos">
-                            Sign up
-                            <i class="fa fa-sign-in ml-1"></i>--%>
-                        <asp:LinkButton ID="btn_Register" CssClass="btn btn-info" OnClick="btn_Register_OnClick" runat="server">Register <i class="fa fa-sign-in"></i></asp:LinkButton>
+                        <asp:LinkButton ID="btn_Register" CssClass="btn btn-info" OnClick="btn_Register_OnClick" runat="server" ValidationGroup="RegGroup">Register <i class="fa fa-sign-in"></i></asp:LinkButton>
                     </div>
                 </div>
 
             </div>
             <!--/.Panel 2-->
         </div>
-        	<!--Modal: Rules Form for nav -->
-			<div class="modal fade" id="tosNav" tabindex="-1" role="dialog" aria-labelledby="tosNav" aria-hidden="true">
-				<div class="modal-dialog cascading-modal" role="document">
-					<!--Content-->
-					<div class="modal-content">
-						<!--Header-->
-						<div class="modal-header bg-dark darken-3 white-text">
-							<h4 class="title"><i class="fa fa-user"></i> Rules</h4>
-							<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-						</div>
-						<!--Body-->
-						<div class="modal-body">
-							<div class="md-form form-sm">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a malesuada augue. Vestibulum nec sem vitae nunc condimentum
+        <!--Modal: Rules Form for nav -->
+        <div class="modal fade" id="tosNav" tabindex="-1" role="dialog" aria-labelledby="tosNav" aria-hidden="true">
+            <div class="modal-dialog cascading-modal" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header bg-dark darken-3 white-text">
+                        <h4 class="title"><i class="fa fa-user"></i>Rules</h4>
+                        <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="md-form form-sm">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a malesuada augue. Vestibulum nec sem vitae nunc condimentum
 									bibendum eu at augue. Fusce auctor, risus et tempor ullamcorper, est dui dapibus tellus, nec gravida orci ante eu
 									ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer finibus pharetra magna, nec facilisis
 									est auctor id. Cras bibendum venenatis facilisis. Praesent consequat odio iaculis orci convallis lobortis nec et
 									justo. Suspendisse eget faucibus mi. Nunc ut egestas nulla. Aenean quis leo vulputate, imperdiet felis at, dignissim
 									purus.
-								</p>
-							</div>
+                            </p>
+                        </div>
 
-						</div>
-					</div>
-					<!--/.Content-->
-				</div>
-			</div>
-			<!--End of Modal: Rules Form for nav-->
-        
-        
-        
-        
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--End of Modal: Rules Form for nav-->
+
+
+
+
 
         <script type="text/javascript" src="./node_modules/mdbootstrap/js/jquery-3.2.1.min.js"></script>
         <!-- Bootstrap tooltips -->

@@ -40,6 +40,15 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.TextBox tb_Email;
         
         /// <summary>
+        /// emailReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailReq;
+        
+        /// <summary>
         /// tb_Password control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace SkpEsport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_Password;
+        
+        /// <summary>
+        /// pwdReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator pwdReq;
         
         /// <summary>
         /// btn_login control.
@@ -67,6 +85,15 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.TextBox tb_RegEmail;
         
         /// <summary>
+        /// regEmailReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator regEmailReq;
+        
+        /// <summary>
         /// tb_RegUsername control.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace SkpEsport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_RegUsername;
+        
+        /// <summary>
+        /// regUsernameReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator regUsernameReq;
         
         /// <summary>
         /// tb_RegPassword control.
@@ -85,6 +121,15 @@ namespace SkpEsport {
         protected global::System.Web.UI.WebControls.TextBox tb_RegPassword;
         
         /// <summary>
+        /// regPasswordReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator regPasswordReq;
+        
+        /// <summary>
         /// tb_RegPasswordRepeat control.
         /// </summary>
         /// <remarks>
@@ -92,6 +137,15 @@ namespace SkpEsport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_RegPasswordRepeat;
+        
+        /// <summary>
+        /// regRepPwdReq control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator regRepPwdReq;
         
         /// <summary>
         /// btn_Register control.

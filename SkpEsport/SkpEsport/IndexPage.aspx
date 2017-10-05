@@ -132,7 +132,7 @@
         <!-- End of Main layout -->
 
 
-        <!--Modal: Login Form-->
+    <%--    <!--Modal: Login Form-->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
             <div class="modal-dialog cascading-modal" role="document">
                 <!--Content-->
@@ -177,10 +177,10 @@
                 <!--/.Content-->
             </div>
         </div>
-        <!--End of Modal: Login Form-->
+        <!--End of Modal: Login Form-->--%>
 
 
-        <!--Modal: Register Form-->
+       <%-- <!--Modal: Register Form-->
         <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
             <div class="modal-dialog cascading-modal" role="document">
                 <!--Content-->
@@ -234,7 +234,7 @@
                 <!--/.Content-->
             </div>
         </div>
-        <!--Modal: Register Form-->
+        <!--Modal: Register Form-->--%>
 
 
         <!--Modal: Create Team Form-->
