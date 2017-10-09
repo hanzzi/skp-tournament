@@ -60,7 +60,7 @@
                             <a class="nav-link" href="https://discord.gg/nUpyP6M" target="_blank">Discord</a>
                         </li>
                         <li>
-                            <asp:Button ID="btn_CloseCon" runat="server" OnClick="btn_CloseCon_OnClick" Text="CLOSE THE CONNECTION NIGGA" />
+                            <%--<asp:Button ID="btn_CloseCon" runat="server" OnClick="btn_CloseCon_OnClick" Text="CLOSE THE CONNECTION NIGGA" />--%>
                         </li>
                     </ul>
                 </div>

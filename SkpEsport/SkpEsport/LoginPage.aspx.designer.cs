@@ -22,15 +22,6 @@ namespace SkpEsport {
         protected global::System.Web.UI.HtmlControls.HtmlForm LoginForm;
         
         /// <summary>
-        /// btn_CloseCon control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_CloseCon;
-        
-        /// <summary>
         /// tb_Email control.
         /// </summary>
         /// <remarks>

@@ -19,54 +19,33 @@ namespace SkpEsport
         private string _loginName;
         private string _loginPassword;
         private string _test;
+        private List<bool> videoGames;
 
         /*
          Page_Load sætter _loginName & _loginPassword til værdien af de to login textbokses .Text værdier
              */
         protected void Page_Load(object sender, EventArgs e)
         {
-            //_loginName = tb_Email.Text;
-            //_loginPassword = tb_Password.Text;
-
-            //if (Session["IsAuth"] != null)
-            //{
-            //    if (_crypt.CheckAuth(Session["IsAuth"].ToString()))
-            //    {
-            //    }
-            //}
 
 
-        }
-
-        /*
-         OnClick event til login knappen. Activere login validering.
-             */
-        protected void btn_login_OnClick(object sender, EventArgs e)
-        {
-          
         }
 
         protected void btn_test_OnClick(object sender, EventArgs e)
         {
-            //string test1 = _crypt.GetAuthVal();
-            //if (_crypt.CheckAuth("ioseuhglsdkgjnsdlgoisdgl seuglseiurtg seriug se tseuh gk"))
-            //{
-            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Validation success" + "');", true);
-            //}
-            //else
-            //{
-            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Validation Failed" + "');", true);
-
-            //}
-            //if (_dbCon.UserLogin("Test", "Test123"))
-            //{
-            //    Response.Redirect("LoginTest.aspx");
-            //}
-            //else
-            //{
-            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Login Failed" + "');", true);
-            //}
             Response.Redirect("LoginTest.aspx");
+        }
+
+        protected void btn_CreateTeam_OnClick(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Create Team Button" + "');", true);
+            
+
+
+
+            Teams team = new Teams(tb_TeamName.Text, );
+
+
+
         }
     }
 }

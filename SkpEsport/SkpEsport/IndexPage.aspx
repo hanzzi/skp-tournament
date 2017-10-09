@@ -254,46 +254,45 @@
                     <div class="modal-body">
                         <div class="md-form form-sm">
                             <i class="fa fa-envelope prefix"></i>
-                            <input type="text" id="form8" class="form-control">
-                            <label for="form8">Your Team name</label>
+                            <%--<input type="text" id="form8" class="form-control">--%>
+                            <asp:TextBox runat="server" ID="tb_TeamName" CssClass="form-control" ValidationGroup="ValTeam"></asp:TextBox>
+                            <label for="tb_TeamName">Your Team name</label>
                         </div>
 
                         <div class="form-row">
                             <div class="form-check col-md-6">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <%--<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">--%>
+                                    <asp:CheckBox runat="server" ID="chk_Csgo" CssClass="form-check-input" />
                                     CS:GO
-                           
                                 </label>
                             </div>
                             <div class="form-check col-md-6">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                    <asp:CheckBox runat="server" ID="chk_Hots" CssClass="form-check-input" />
                                     Heroes of the Storm
-                           
-                                </label>
+                           </label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-check col-md-6">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                    <%--<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">--%>
+                                    <asp:CheckBox runat="server" ID="chk_Lol" CssClass="form-check-input" />
                                     League of Legends
-                           
-                                </label>
+                           </label>
                             </div>
                             <div class="form-check col-md-6">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                                    <asp:CheckBox runat="server" ID="chk_Overwatch" CssClass="form-check-input" />
                                     Overwatch
-                           
-                                </label>
+                           </label>
                             </div>
                         </div>
 
                         <div class="text-center mt-2">
-                            <button class="btn btn-info">Create Team <i class="fa fa-sign-in ml-1"></i></button>
+                            <asp:LinkButton runat="server" ID="btn_CreateTeam" OnClick="btn_CreateTeam_OnClick" ValidationGroup="ValTeam" CssClass="btn btn-info">Create Team <i class="fa fa-sign-in ml-1"></i></asp:LinkButton>
                         </div>
 
                     </div>
@@ -351,35 +350,44 @@
                     <!--Body-->
                     <div class="modal-body">
                         <div class="md-form form-sm">
-                            <p>
-                                Regler:
+                            <p class="">
+                                
                                 <br/>
-                                 • E-Sport om onsdagen kommer til at forløbe fra 8:00-11:30, hvor der spilles turnering eller træning i et af de udvalgte
+                                <br/>
+                                 E-Sport om onsdagen kommer til at forløbe fra 8:00-11:30, hvor der spilles turnering eller træning i et af de udvalgte
                                 spil. Man har lov til at holde sin pause mellem 9:30-10:00, men her gælder de normale regler med at man skal være til rådighed.
                                 <br/>
-                                • Fredag er der taktik og planlægning for holdene (ingen spil) – dette strækker sig fra 12:00-15:00 • Det er kun e-sport
+                                <br/>
+                                Fredag er der taktik og planlægning for holdene (ingen spil) – dette strækker sig fra 12:00-15:00 • Det er kun e-sport
                                 som bliver spillet. Hvis man ikke deltager i e-sport, så er det en helt normal arbejdsdag. Der er dog en undtagelse at hvis
                                 man hellere vil spille et andet spil, så kan man samle et team i det spil og udøve e-sport på den måde.
                                 <br/>
-                                 • Arbejde over e-sport
-                                – Hvis der kommer en arbejdsopgave tager man selvfølgelig den opgave og så finder man sammen med sit team og modstanderne
+                                <br/>
+                                Arbejde over e-sport
+                                Hvis der kommer en arbejdsopgave tager man selvfølgelig den opgave og så finder man sammen med sit team og modstanderne
                                 ud af hvordan kampen så blive afklaret. 
                                 <br/>
-                                • Man kan kun være med i 1 af turneringerne, da de køres samtidig. Man kan godt sidde
+                                <br/>
+                                Man kan kun være med i 1 af turneringerne, da de køres samtidig. Man kan godt sidde
                                 som udskifter til en anden turnering hvis der skulle komme en sygemelding.
                                 <br/>
-                                 • Der spilles 1 turneringskamp hver onsdag, så
+                                <br/>
+                                Der spilles 1 turneringskamp hver onsdag, så
                                 det er fleksibelt mellem de 2 team hvornår de afvikler kampen bare det er indenfor tidsrummet 8:00-11:30. 
                                 <br/>
-                                • Ved sygemelding
+                                <br/>
+                                Ved sygemelding
                                 i forbindelse med turneringen kan man forsøge at finde en person som kan overtage pladsen eller må kampen gå til det hold
                                 som kan stille med fuldt hold. Der kan stadig trænes som de spillere som er mødt op. 
                                 <br/>
-                                • Hvis man ligger sygemeldt eller ikke
+                                <br/>
+                                Hvis man ligger sygemeldt eller ikke
                                 er tilstede i SKP’en kan man ikke deltage i turneringskampene. 
+                                <br/>
                                 <br/>                                
-                                • Ordentlig omgangstone og ikke for alt for højtråbende.
-                       
+                                Ordentlig omgangstone og ikke for alt for højtråbende.
+                                <br/>
+
                             </p>
                         </div>
 

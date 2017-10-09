@@ -229,6 +229,11 @@ namespace SkpEsport
 
         }
 
+        public void CreateTeam(string team, List<string> games)
+        {
+            
+        }
+
     }
 
 }
