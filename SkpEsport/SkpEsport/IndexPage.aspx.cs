@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -37,13 +38,30 @@ namespace SkpEsport
 
         protected void btn_CreateTeam_OnClick(object sender, EventArgs e)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Create Team Button" + "');", true);
-            
+
+            List<string> gamesList = new List<string>();
+
+            if (chk_Csgo.Checked)
+            {
+                gamesList.Add("csgo");
+            }
+            if (chk_Hots.Checked)
+            {
+                gamesList.Add("hots");
+            }
+            if (chk_Lol.Checked)
+            {
+                gamesList.Add("lol");
+            }
+            if (chk_Overwatch.Checked)
+            {
+                gamesList.Add("overwatch");
+            }
 
 
+            Teams team = new Teams(tb_TeamName.Text, gamesList);
 
-            Teams team = new Teams(tb_TeamName.Text, );
-
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + team.ToString() + "');", true);
 
 
         }
