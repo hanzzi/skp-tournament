@@ -21,7 +21,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">SKP LAN</a>
                 </div>
@@ -104,6 +104,47 @@
 
         <script src="Scripts/jquery-1.9.1.min.js"></script>
         <script src="Scripts/bootstrap.min.js"></script>
+        <script>
+            var cacheName = "SKPEsport-Cache";
+            
+            // init cache of resources
+            self.addEventListener('install', function (event) {
+                event.waitUntil(
+                    caches.open(cacheName).then(function (cache) {
+                        return cache.addAll(
+                            [
+                                '/imgs/csgo.png',
+                                '/imgs/hots.png',
+                                '/imgs/lol.png',
+                                '/imgs/overwatch.png',
+                                '/Content/bootstrap.min.css',
+                                '/Scripts/jquery-1.9.1.min.js',
+                                '/Scripts/bootstrap.min.js'
+                            ]
+                        );
+                    })
+                );
+            });
+
+            // for new information
+            self.addEventListener('fetch', function (event) {
+                event.respondWith(
+                    caches.open(cacheName).then(function (cache) {
+                        return cache.match(event.request).then(function (response) {
+                            return response || fetch(event.request).then(function (response) {
+                                cache.put(event.request, response.clone());
+                                return response;
+                            });
+                        });
+                    })
+                );
+            });
+
+            // fallback if user is offline
+            self.addEventListener('fetch', function (event) {
+                event.respondWith(fetch(event.request));
+            });
+        </script>
     </form>
 </body>
 </html>
